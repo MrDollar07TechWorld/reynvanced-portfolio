@@ -8,19 +8,27 @@ const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  // Flatten all skills into one array
+  const allSkills = skills.flatMap(category => 
+    category.items.map(skill => ({
+      name: skill.name,
+      icon: skill.icon
+    }))
+  );
+
   const container = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.05,
       },
     },
   };
 
   const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, scale: 0.8 },
+    show: { opacity: 1, scale: 1 },
   };
 
   return (
@@ -32,43 +40,40 @@ const Skills = () => {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
             My <span className="text-gradient">Skills</span>
           </h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Technologies and tools I use to bring ideas to life
+          </p>
 
           <motion.div
             variants={container}
             initial="hidden"
             animate={isInView ? "show" : "hidden"}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto"
+            className="max-w-5xl mx-auto glass rounded-2xl p-8 md:p-12 relative"
           >
-            {skills.map((skillCategory, index) => (
-              <motion.div
-                key={index}
-                variants={item}
-                className="glass rounded-2xl p-6 md:p-8 relative group hover:glow transition-all duration-300"
-                whileHover={{ scale: 1.02 }}
-              >
-                <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all" />
-                
-                <h3 className="text-2xl font-bold mb-6 text-primary">
-                  {skillCategory.category}
-                </h3>
-                
-                <div className="flex flex-wrap gap-3">
-                  {skillCategory.items.map((skill, skillIndex) => (
-                    <motion.span
-                      key={skillIndex}
-                      className="px-4 py-2 glass rounded-lg text-sm font-medium hover:bg-primary/10 hover:border-primary/30 transition-all cursor-default"
-                      whileHover={{ scale: 1.05, y: -2 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      {skill}
-                    </motion.span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-secondary/10 rounded-full blur-3xl" />
+            
+            <div className="relative flex flex-wrap justify-center gap-4">
+              {allSkills.map((skill, index) => (
+                <motion.div
+                  key={index}
+                  variants={item}
+                  className="glass rounded-xl p-4 flex flex-col items-center gap-3 min-w-[120px] hover:glow transition-all cursor-default group"
+                  whileHover={{ scale: 1.1, y: -5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <div className="text-4xl group-hover:scale-110 transition-transform">
+                    {skill.icon}
+                  </div>
+                  <span className="text-sm font-medium text-center">
+                    {skill.name}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </motion.div>
       </div>

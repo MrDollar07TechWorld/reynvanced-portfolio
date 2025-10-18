@@ -1,0 +1,149 @@
+// Centralized portfolio data
+export const portfolioData = {
+  personal: {
+    name: "Yallanuru Revanth Kumar",
+    role: "Full Stack Developer",
+    tagline: "Building the future, one line of code at a time",
+    about: "Passionate full-stack developer with expertise in modern web technologies. I create beautiful, performant, and user-centric applications that solve real-world problems. Specialized in React, Node.js, and cloud technologies.",
+    email: "revanthkumaryallanuru103@gmail.com",
+    location: "India",
+    resumeUrl: "#",
+  },
+
+  social: [
+    {
+      name: "GitHub",
+      icon: "Github",
+      url: "https://github.com/revanthkumar",
+    },
+    {
+      name: "LinkedIn",
+      icon: "Linkedin",
+      url: "https://linkedin.com/in/revanthkumar",
+    },
+    {
+      name: "Twitter",
+      icon: "Twitter",
+      url: "https://twitter.com/revanthkumar",
+    },
+    {
+      name: "Email",
+      icon: "Mail",
+      url: "mailto:revanthkumaryallanuru103@gmail.com",
+    },
+  ],
+
+  skills: [
+    {
+      category: "Frontend",
+      items: [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Three.js",
+      ],
+    },
+    {
+      category: "Backend",
+      items: [
+        "Node.js",
+        "Express.js",
+        "Python",
+        "Django",
+        "REST APIs",
+        "GraphQL",
+      ],
+    },
+    {
+      category: "Database",
+      items: [
+        "MongoDB",
+        "PostgreSQL",
+        "MySQL",
+        "Firebase",
+        "Redis",
+        "Prisma",
+      ],
+    },
+    {
+      category: "DevOps & Tools",
+      items: [
+        "Git",
+        "Docker",
+        "AWS",
+        "Vercel",
+        "CI/CD",
+        "Linux",
+      ],
+    },
+  ],
+
+  projects: [
+    {
+      id: 1,
+      title: "AI-Powered SaaS Platform",
+      description: "A modern SaaS application with AI integration, real-time collaboration, and advanced analytics dashboard.",
+      tech: ["React", "Node.js", "OpenAI", "PostgreSQL", "AWS"],
+      image: "/projects/saas.jpg",
+      link: "https://github.com/revanthkumar",
+      github: "https://github.com/revanthkumar/ai-saas",
+      featured: true,
+    },
+    {
+      id: 2,
+      title: "E-Commerce Platform",
+      description: "Full-featured e-commerce platform with payment integration, inventory management, and admin dashboard.",
+      tech: ["Next.js", "Stripe", "MongoDB", "Tailwind"],
+      image: "/projects/ecommerce.jpg",
+      link: "https://github.com/revanthkumar",
+      github: "https://github.com/revanthkumar/ecommerce",
+      featured: true,
+    },
+    {
+      id: 3,
+      title: "Real-time Chat Application",
+      description: "Scalable chat app with WebSocket connections, file sharing, and end-to-end encryption.",
+      tech: ["React", "Socket.io", "Express", "Redis"],
+      image: "/projects/chat.jpg",
+      link: "https://github.com/revanthkumar",
+      github: "https://github.com/revanthkumar/chat-app",
+      featured: false,
+    },
+    {
+      id: 4,
+      title: "Project Management Tool",
+      description: "Collaborative project management platform with Kanban boards, time tracking, and team analytics.",
+      tech: ["Vue.js", "Django", "PostgreSQL", "Docker"],
+      image: "/projects/pm.jpg",
+      link: "https://github.com/revanthkumar",
+      github: "https://github.com/revanthkumar/pm-tool",
+      featured: false,
+    },
+  ],
+
+  experience: [
+    {
+      id: 1,
+      role: "Senior Full Stack Developer",
+      company: "Tech Innovators Inc.",
+      period: "2022 - Present",
+      description: "Leading development of cloud-based applications and mentoring junior developers.",
+    },
+    {
+      id: 2,
+      role: "Full Stack Developer",
+      company: "Digital Solutions Ltd.",
+      period: "2020 - 2022",
+      description: "Built responsive web applications and RESTful APIs for various clients.",
+    },
+    {
+      id: 3,
+      role: "Frontend Developer",
+      company: "StartUp Ventures",
+      period: "2019 - 2020",
+      description: "Developed modern user interfaces using React and implemented pixel-perfect designs.",
+    },
+  ],
+};

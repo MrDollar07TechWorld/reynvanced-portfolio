@@ -1,15 +1,14 @@
 import { motion } from "framer-motion";
 import { portfolioData } from "@/data";
-import { Github, Linkedin, Twitter, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail } from "lucide-react";
 
 const Footer = () => {
   const { personal, social } = portfolioData;
-  const currentYear = new Date().getFullYear();
 
   const socialIcons: Record<string, any> = {
     Github,
     Linkedin,
-    Twitter,
+    Instagram,
     Mail,
   };
 
@@ -17,10 +16,10 @@ const Footer = () => {
     <footer className="py-12 border-t border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center space-y-6">
-          {/* Social Links */}
+          {/* Social Links (driven from data.js) */}
           <div className="flex gap-4">
             {social.map((link, index) => {
-              const Icon = socialIcons[link.icon];
+              const Icon = socialIcons[link.icon] || Github;
               return (
                 <motion.a
                   key={index}
@@ -37,12 +36,9 @@ const Footer = () => {
             })}
           </div>
 
-          {/* Copyright */}
-          <div className="text-center text-sm text-muted-foreground">
-            <p className="flex items-center gap-2 justify-center">
-              © {currentYear} {personal.name}. Made with{" "}
-              <Heart className="h-4 w-4 text-accent fill-accent" /> and code
-            </p>
+          {/* Tagline from data.js */}
+          <div className="text-center text-lg font-semibold">
+            {personal.tagline}
           </div>
         </div>
       </div>

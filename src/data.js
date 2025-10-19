@@ -2,39 +2,39 @@
 export const portfolioData = {
   personal: {
     name: "Yallanuru Revanth Kumar",
-    role: "Full Stack Developer",
-    tagline: "Building the future, one line of code at a time",
-    about: "Passionate full-stack developer with expertise in modern web technologies. I create beautiful, performant, and user-centric applications that solve real-world problems. Specialized in React, Node.js, and cloud technologies.",
+    role: "Full Stack Developer | freelancer | Student | Mentor | Programmer",
+    tagline: "Turning bold ideas into blazing web experiences.",
+    about: "I’m Revanth Kumar Yallanuru — a passionate full-stack developer who blends creativity with precision. I love turning complex ideas into seamless, high-performing digital experiences. For me, code isn’t just about function — it’s about creating technology that inspires, connects, and leaves a lasting impact.",
     email: "revanthkumaryallanuru103@gmail.com",
-    location: "India",
+    location: "Tirupati",
     portraitImage: "/src/assets/portrait.jpg",
-    resumeUrl: "#", // Update with your resume link
-    // EmailJS Configuration (required for contact form)
-    emailJsServiceId: "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-    emailJsTemplateId: "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
-    emailJsPublicKey: "YOUR_PUBLIC_KEY", // Replace with your EmailJS public key
+    resumeUrl: "#", 
+    emailJsServiceId: "service_wh1e55s", 
+    emailJsTemplateId: "template_v7hlhyr",
+    emailJsPublicKey: "wYWNraaxlIDzx3Yc7", 
   },
 
   social: [
     {
       name: "GitHub",
       icon: "Github",
-      url: "https://github.com/revanthkumar",
+      url: "https://github.com/revanthkumaryallanuru",
     },
     {
       name: "LinkedIn",
       icon: "Linkedin",
-      url: "https://linkedin.com/in/revanthkumar",
+      url: "https://www.linkedin.com/in/revanth-kumar-yallanuru-434488329/",
     },
     {
-      name: "Twitter",
-      icon: "Twitter",
-      url: "https://twitter.com/revanthkumar",
+      name: "Instagram",
+      icon: "Instagram",
+      url: "https://instagram.com/revanth_kumar_yallanuru",
     },
+   
     {
       name: "Email",
       icon: "Mail",
-      url: "mailto:revanthkumaryallanuru103@gmail.com",
+      url: "revanthkumaryallanuru103@gmail.com",
     },
   ],
 
@@ -43,29 +43,17 @@ export const portfolioData = {
       category: "All",
       items: [
         { name: "React", icon: "⚛️" },
-        { name: "Next.js", icon: "▲" },
         { name: "TypeScript", icon: "🔷" },
         { name: "JavaScript", icon: "🟨" },
         { name: "Node.js", icon: "🟢" },
         { name: "Express", icon: "🚂" },
         { name: "Python", icon: "🐍" },
-        { name: "Django", icon: "🎸" },
         { name: "MongoDB", icon: "🍃" },
-        { name: "PostgreSQL", icon: "🐘" },
         { name: "MySQL", icon: "🐬" },
         { name: "Firebase", icon: "🔥" },
-        { name: "Redis", icon: "🔴" },
         { name: "Tailwind", icon: "🎨" },
         { name: "HTML5", icon: "📄" },
-        { name: "CSS3", icon: "🎭" },
         { name: "Git", icon: "📦" },
-        { name: "Docker", icon: "🐳" },
-        { name: "AWS", icon: "☁️" },
-        { name: "Vercel", icon: "▲" },
-        { name: "GraphQL", icon: "◈" },
-        { name: "REST API", icon: "🔌" },
-        { name: "Three.js", icon: "🎲" },
-        { name: "Framer", icon: "🎬" },
       ],
     },
   ],
@@ -91,49 +79,7 @@ export const portfolioData = {
       github: "https://github.com/revanthkumar/ecommerce",
       featured: true,
     },
-    {
-      id: 3,
-      title: "Real-time Chat Application",
-      description: "Scalable chat app with WebSocket connections, file sharing, and end-to-end encryption.",
-      tech: ["React", "Socket.io", "Express", "Redis"],
-      image: "/projects/chat.jpg",
-      link: "https://github.com/revanthkumar",
-      github: "https://github.com/revanthkumar/chat-app",
-      featured: false,
-    },
-    {
-      id: 4,
-      title: "Project Management Tool",
-      description: "Collaborative project management platform with Kanban boards, time tracking, and team analytics.",
-      tech: ["Vue.js", "Django", "PostgreSQL", "Docker"],
-      image: "/projects/pm.jpg",
-      link: "https://github.com/revanthkumar",
-      github: "https://github.com/revanthkumar/pm-tool",
-      featured: false,
-    },
+    
   ],
 
-  experience: [
-    {
-      id: 1,
-      role: "Senior Full Stack Developer",
-      company: "Tech Innovators Inc.",
-      period: "2022 - Present",
-      description: "Leading development of cloud-based applications and mentoring junior developers.",
-    },
-    {
-      id: 2,
-      role: "Full Stack Developer",
-      company: "Digital Solutions Ltd.",
-      period: "2020 - 2022",
-      description: "Built responsive web applications and RESTful APIs for various clients.",
-    },
-    {
-      id: 3,
-      role: "Frontend Developer",
-      company: "StartUp Ventures",
-      period: "2019 - 2020",
-      description: "Developed modern user interfaces using React and implemented pixel-perfect designs.",
-    },
-  ],
 };

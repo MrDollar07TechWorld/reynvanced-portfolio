@@ -134,4 +134,102 @@ All colors MUST be HSL.
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  /* Embla / Carousel stage styles for centered, overlapping card look */
+  .carousel-stage {
+    position: relative;
+    background: var(--card);
+    border-radius: calc(var(--radius) * 2);
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(2,6,23,0.45);
+  }
+
+  .embla {
+    overflow: visible; /* allow neighboring slides to peek */
+  }
+
+  .embla__container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .embla__slide {
+    flex: 0 0 320px; /* base width for slide */
+    transition: transform 350ms cubic-bezier(.22,.9,.34,1), opacity 250ms ease;
+    will-change: transform, opacity;
+    opacity: 0.85;
+    transform-origin: center center;
+  }
+
+  .embla__slide .card-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: calc(var(--radius) * 1.5);
+    padding: 1.25rem;
+    background: var(--card);
+    box-shadow: 0 8px 24px rgba(2,6,23,0.18);
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+
+  /* Selected (center) slide styling */
+  .embla__slide.is-selected {
+    opacity: 1;
+    transform: scale(1.06) translateY(-8px);
+    z-index: 10;
+  }
+
+  /* Non-selected slides are slightly dimmed and pushed down */
+  .embla__slide:not(.is-selected) .card-inner {
+    transform: translateY(6px);
+  }
+
+  /* Large stage variant (for the hero-like card) */
+  .carousel-stage.hero {
+    padding: 3rem 3.5rem;
+  }
+
+  /* Navigation arrow styling */
+  .carousel-arrow {
+    background: var(--glass-bg);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--glass-border);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+  /* Marquee ribbon for languages & tools */
+  .marquee {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .marquee__track {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+  }
+
+  .marquee__item {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-radius: 9999px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.03);
+  }
+
+  .marquee__track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+  }
 }

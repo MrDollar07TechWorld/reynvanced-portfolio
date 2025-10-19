@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { personal } = portfolioData;
@@ -34,20 +33,34 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Send email using EmailJS
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
+      // Send email using Web3Forms
+      const accessKey = "7910eb0e-376d-4296-9b56-4ad9684538f9"; // provided access key
+
+      // Build payload according to Web3Forms expected fields
+      const payload = {
+        access_key: accessKey,
+        name: formData.name,
+        email: formData.email,
         message: formData.message,
-        to_email: personal.email,
+        subject: `New message from ${formData.name} via portfolio contact form`,
+        // optional: set replyto so the receiver can reply directly
+        replyto: formData.email,
+        // You may include additional hidden fields if needed
       };
 
-      await emailjs.send(
-        personal.emailJsServiceId,
-        personal.emailJsTemplateId,
-        templateParams,
-        personal.emailJsPublicKey
-      );
+      const resp = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await resp.json();
+
+      if (!resp.ok || result.success === false) {
+        throw new Error(result.message || "Failed to send via Web3Forms");
+      }
 
       toast({
         title: "Message sent successfully!",

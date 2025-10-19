@@ -99,7 +99,7 @@ const About = () => {
               className="glass rounded-xl p-6 text-center hover:glow transition-all"
               whileHover={{ scale: 1.05 }}
             >
-              <div className="text-4xl font-bold text-primary mb-2">5+</div>
+              <div className="text-4xl font-bold text-primary mb-2">2+</div>
               <div className="text-sm text-muted-foreground">Years Experience</div>
             </motion.div>
             
@@ -107,7 +107,7 @@ const About = () => {
               className="glass rounded-xl p-6 text-center hover:glow-secondary transition-all"
               whileHover={{ scale: 1.05 }}
             >
-              <div className="text-4xl font-bold text-secondary mb-2">50+</div>
+              <div className="text-4xl font-bold text-secondary mb-2">12+</div>
               <div className="text-sm text-muted-foreground">Projects Completed</div>
             </motion.div>
             
@@ -115,7 +115,7 @@ const About = () => {
               className="glass rounded-xl p-6 text-center col-span-2 md:col-span-1 hover:glow transition-all"
               whileHover={{ scale: 1.05 }}
             >
-              <div className="text-4xl font-bold text-accent mb-2">30+</div>
+              <div className="text-4xl font-bold text-accent mb-2">10+</div>
               <div className="text-sm text-muted-foreground">Happy Clients</div>
             </motion.div>
           </motion.div>

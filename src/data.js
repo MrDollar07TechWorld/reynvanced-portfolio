@@ -7,29 +7,29 @@ export const portfolioData = {
     about: "Passionate full-stack developer with expertise in modern web technologies. I create beautiful, performant, and user-centric applications that solve real-world problems. Specialized in React, Node.js, and cloud technologies.",
     email: "revanthkumaryallanuru103@gmail.com",
     location: "India",
-    portraitImage: "/src/assets/portrait.jpg",
+    portraitImage: "../../src/assets/portrait.jpg",
     resumeUrl: "#", // Update with your resume link
     // EmailJS Configuration (required for contact form)
-    emailJsServiceId: "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-    emailJsTemplateId: "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
-    emailJsPublicKey: "YOUR_PUBLIC_KEY", // Replace with your EmailJS public key
+    emailJsServiceId: "service_wh1e55s", // Replace with your EmailJS service ID
+    emailJsTemplateId: "template_v7hlhyr", // Replace with your EmailJS template ID
+    emailJsPublicKey: "wYWNraaxlIDzx3Yc7", // Replace with your EmailJS public key
   },
 
   social: [
     {
       name: "GitHub",
       icon: "Github",
-      url: "https://github.com/revanthkumar",
+      url: "https://github.com/revanthkumaryallanuru",
     },
     {
       name: "LinkedIn",
       icon: "Linkedin",
-      url: "https://linkedin.com/in/revanthkumar",
+      url: "https://linkedin.com/in/revanthkumaryallanuru",
     },
     {
       name: "Twitter",
       icon: "Twitter",
-      url: "https://twitter.com/revanthkumar",
+      url: "https://twitter.com/revanthkumaryallanuru",
     },
     {
       name: "Email",
@@ -49,23 +49,13 @@ export const portfolioData = {
         { name: "Node.js", icon: "🟢" },
         { name: "Express", icon: "🚂" },
         { name: "Python", icon: "🐍" },
-        { name: "Django", icon: "🎸" },
         { name: "MongoDB", icon: "🍃" },
-        { name: "PostgreSQL", icon: "🐘" },
         { name: "MySQL", icon: "🐬" },
         { name: "Firebase", icon: "🔥" },
-        { name: "Redis", icon: "🔴" },
         { name: "Tailwind", icon: "🎨" },
         { name: "HTML5", icon: "📄" },
         { name: "CSS3", icon: "🎭" },
         { name: "Git", icon: "📦" },
-        { name: "Docker", icon: "🐳" },
-        { name: "AWS", icon: "☁️" },
-        { name: "Vercel", icon: "▲" },
-        { name: "GraphQL", icon: "◈" },
-        { name: "REST API", icon: "🔌" },
-        { name: "Three.js", icon: "🎲" },
-        { name: "Framer", icon: "🎬" },
       ],
     },
   ],
@@ -91,49 +81,8 @@ export const portfolioData = {
       github: "https://github.com/revanthkumar/ecommerce",
       featured: true,
     },
-    {
-      id: 3,
-      title: "Real-time Chat Application",
-      description: "Scalable chat app with WebSocket connections, file sharing, and end-to-end encryption.",
-      tech: ["React", "Socket.io", "Express", "Redis"],
-      image: "/projects/chat.jpg",
-      link: "https://github.com/revanthkumar",
-      github: "https://github.com/revanthkumar/chat-app",
-      featured: false,
-    },
-    {
-      id: 4,
-      title: "Project Management Tool",
-      description: "Collaborative project management platform with Kanban boards, time tracking, and team analytics.",
-      tech: ["Vue.js", "Django", "PostgreSQL", "Docker"],
-      image: "/projects/pm.jpg",
-      link: "https://github.com/revanthkumar",
-      github: "https://github.com/revanthkumar/pm-tool",
-      featured: false,
-    },
+    
   ],
 
-  experience: [
-    {
-      id: 1,
-      role: "Senior Full Stack Developer",
-      company: "Tech Innovators Inc.",
-      period: "2022 - Present",
-      description: "Leading development of cloud-based applications and mentoring junior developers.",
-    },
-    {
-      id: 2,
-      role: "Full Stack Developer",
-      company: "Digital Solutions Ltd.",
-      period: "2020 - 2022",
-      description: "Built responsive web applications and RESTful APIs for various clients.",
-    },
-    {
-      id: 3,
-      role: "Frontend Developer",
-      company: "StartUp Ventures",
-      period: "2019 - 2020",
-      description: "Developed modern user interfaces using React and implemented pixel-perfect designs.",
-    },
-  ],
+
 };

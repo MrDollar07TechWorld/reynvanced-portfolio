@@ -3,7 +3,6 @@ import { portfolioData } from "@/data";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code2, Zap, Target } from "lucide-react";
-import portrait from "@/assets/portrait.jpg";
 
 const About = () => {
   const { personal } = portfolioData;
@@ -35,8 +34,8 @@ const About = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-primary rounded-2xl blur-2xl opacity-30" />
                 <img
-                  src={portrait}
-                  alt="Yallanuru Revanth Kumar"
+                  src={personal.portraitImage}
+                  alt={personal.name}
                   className="relative rounded-2xl w-full max-w-sm glass shadow-2xl"
                 />
               </div>

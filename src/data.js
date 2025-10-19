@@ -7,7 +7,12 @@ export const portfolioData = {
     about: "Passionate full-stack developer with expertise in modern web technologies. I create beautiful, performant, and user-centric applications that solve real-world problems. Specialized in React, Node.js, and cloud technologies.",
     email: "revanthkumaryallanuru103@gmail.com",
     location: "India",
-    resumeUrl: "#",
+    portraitImage: "/src/assets/portrait.jpg",
+    resumeUrl: "#", // Update with your resume link
+    // EmailJS Configuration (required for contact form)
+    emailJsServiceId: "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
+    emailJsTemplateId: "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+    emailJsPublicKey: "YOUR_PUBLIC_KEY", // Replace with your EmailJS public key
   },
 
   social: [

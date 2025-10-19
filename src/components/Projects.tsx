@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { portfolioData } from "@/data";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LazyLoad from "react-lazyload";
 
@@ -81,38 +81,21 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  <div className="flex gap-3">
-                    <Button
-                      asChild
-                      variant="outline"
-                      size="sm"
-                      className="glass border-primary/30 hover:border-primary"
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="sm"
+                    className="glass border-primary/30 hover:border-primary w-full"
+                  >
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Live Demo
-                      </a>
-                    </Button>
-                    <Button
-                      asChild
-                      variant="outline"
-                      size="sm"
-                      className="glass border-secondary/30 hover:border-secondary"
-                    >
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="mr-2 h-4 w-4" />
-                        Code
-                      </a>
-                    </Button>
-                  </div>
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      View Live Demo
+                    </a>
+                  </Button>
                 </div>
               </motion.div>
             ))}

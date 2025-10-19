@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { personal } = portfolioData;
@@ -33,28 +34,33 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Create mailto link with form data
-      const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
-      const body = encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: personal.email,
+      };
+
+      await emailjs.send(
+        personal.emailJsServiceId,
+        personal.emailJsTemplateId,
+        templateParams,
+        personal.emailJsPublicKey
       );
-      
-      // Open default email client
-      window.location.href = `mailto:${personal.email}?subject=${subject}&body=${body}`;
 
       toast({
-        title: "Opening email client...",
-        description: "Your default email app will open with the message ready to send.",
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
       });
 
-      // Clear form after a short delay
-      setTimeout(() => {
-        setFormData({ name: "", email: "", message: "" });
-      }, 1000);
+      // Clear form
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
+      console.error("EmailJS error:", error);
       toast({
-        title: "Error",
-        description: "Please email me directly at " + personal.email,
+        title: "Failed to send message",
+        description: "Please try again or email me directly at " + personal.email,
         variant: "destructive",
       });
     } finally {
